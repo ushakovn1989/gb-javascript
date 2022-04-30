@@ -30,8 +30,50 @@
 -->
 <script>
   "use strict";
+  
+  /**
+   * Функция складывает два переданных числа.
+   * @param {number} number1 первое слагаемое.
+   * @param {number} number2 второе слагаемое.
+   * @returns {number} возвращает сумму двух переданных чисел.
+   */
+  function sum(number1, number2) {
+    return number1 + number2;
+  }
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  /**
+   * Функция определяет, какое из двух переданных чисел больше и вычитает из 
+     большего числа меньшее.
+   * @param {number} number1 первое число.
+   * @param {number} number2 второе число.
+   * @returns {number} возвращает разность двух переданных чисел.
+   */
+  function subtract(number1, number2) {
+    if (number1 < number2) {
+      return number2 - number1;
+    }
+    return number1 - number2;
+  }
+
+  /**
+   * Функция перемножает два переданных числа.
+   * @param {number} number1 первый сомножитель.
+   * @param {number} number2 второй сомножитель.
+   * @returns {number} возвращает произведение двух переданных чисел.
+   */
+  function multiply(number1, number2) {
+    return number1 * number2;
+  }
+
+  /**
+   * Функция делит первое переданное число на второе.
+   * @param {number} number1 делимое.
+   * @param {number} number2 делитель.
+   * @returns {number} возвращает частное двух переданных чисел.
+   */
+  function divide(number1, number2) {
+    return Math.round((number1 / number2) * 100) / 100;
+  }
 </script>
 </body>
 </html>

@@ -21,7 +21,21 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  const userNumberA = Number(prompt("Введите число a: "));
+  const userNumberB = Number(prompt("Введите число b: "));
+  if (userNumberA > 0) {
+    if (userNumberB > 0) {
+      console.log(userNumberA - userNumberB);
+    } else if (userNumberB < 0) {
+      console.log(userNumberA + userNumberB);
+    }
+  } else if (userNumberA < 0) {
+    if (userNumberB < 0) {
+      console.log(userNumberA * userNumberB);
+    } else if (userNumberB > 0) {
+      console.log(userNumberA + userNumberB);
+    }
+  }
 </script>
 </body>
 </html>

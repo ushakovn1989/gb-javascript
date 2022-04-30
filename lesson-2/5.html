@@ -32,7 +32,72 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  /**
+   * Функция складывает два переданных числа.
+   * @param {number} number1 первое слагаемое.
+   * @param {number} number2 второе слагаемое.
+   * @returns {number} возвращает сумму двух переданных чисел.
+   */
+   function sum(number1, number2) {
+    return number1 + number2;
+  }
+
+  /**
+   * Функция определяет, какое из двух переданных чисел больше и вычитает из 
+     большего числа меньшее.
+   * @param {number} number1 первое число.
+   * @param {number} number2 второе число.
+   * @returns {number} возвращает разность двух переданных чисел.
+   */
+  function subtract(number1, number2) {
+    if (number1 < number2) {
+      return number2 - number1;
+    }
+    return number1 - number2;
+  }
+
+  /**
+   * Функция перемножает два переданных числа.
+   * @param {number} number1 первый сомножитель.
+   * @param {number} number2 второй сомножитель.
+   * @returns {number} возвращает произведение двух переданных чисел.
+   */
+  function multiply(number1, number2) {
+    return number1 * number2;
+  }
+
+  /**
+   * Функция делит первое переданное число на второе.
+   * @param {number} number1 делимое.
+   * @param {number} number2 делитель.
+   * @returns {number} возвращает частное двух переданных чисел.
+   */
+  function divide(number1, number2) {
+    return Math.round((number1 / number2) * 100) / 100;
+  }
+
+  /**
+   * Функция производит переданную математическую операцию над двумя числами.
+   * @param {number} arg1 первое число.
+   * @param {number} arg2 второе число.
+   * @param {string} operation строка обозначающая требуемую математическую
+     операцию, допустимые значения "+", "-", "*", "/".
+   * @returns {number} возвращает результат операции, который был передан в
+    параметр operation для двух первых аргументов (arg1 и arg2), или NaN, если
+    был передан некорректый аргумент operation.
+   */
+  function mathOperation(arg1, arg2, operation) {
+    if (operation === "+") {
+      return sum(arg1, arg2);
+    } else if (operation === "-") {
+      return subtract(arg1, arg2);
+    } else if (operation === "*") {
+      return multiply(arg1, arg2);
+    } else if (operation === "/") {
+      return divide(arg1, arg2);
+    }
+    return NaN;
+  }
 </script>
 </body>
 </html>

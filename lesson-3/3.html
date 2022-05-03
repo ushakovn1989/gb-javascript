@@ -29,7 +29,9 @@
     },
   ];
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  products.forEach(function(item) {
+    item.price = Math.round(item.price * 0.85 * 100) / 100;
+  });
 </script>
 </body>
 </html>

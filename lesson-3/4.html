@@ -44,7 +44,15 @@
     },
   ];
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  const productsWithPhoto = products.filter(function(item) {
+    return item.photos && item.photos[0];
+  })
+  console.log(productsWithPhoto);
+  
+  products.sort(function(item1, item2) {
+    return item1.price > item2.price;
+  });
+  console.log(products);
 </script>
 </body>
 </html>

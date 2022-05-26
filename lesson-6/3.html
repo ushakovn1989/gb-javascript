@@ -30,6 +30,8 @@
   <i class="fas fa-star"></i>
 </div>
 
+<div class="test"></div>
+
 <script>
   "use strict";
 
@@ -37,20 +39,37 @@
   1. При наведении на любую из звезд, данной звезде должен ставиться класс
   golden, также такой класс должен ставиться всем звездам до нее слева.
   */
-
+  const stars = Array.from(document.querySelectorAll(".fas.fa-star"));
+  for (const star of stars) {
+    star.addEventListener("mouseover", event => {
+      for (let i = 0; i <= stars.indexOf(event.target); i++) {
+        stars[i].classList.add("golden");
+      }
+    });
+  }
 
   /*
   2. Когда мы уводим курсор мыши от звезды, все поставленные классы из первого
   задания должны быть удалены.
    */
-
+   for (const star of stars) {
+    star.addEventListener("mouseleave", () => {
+      stars.forEach(star => star.classList.remove("golden"));
+    });
+  }
 
   /*
   3. Когда мы переводим мышь от одной звезды к другой, у нас могут мигать
   звезды (временно могут становиться черными). Почему так? Напишите словами.
   Можем ли мы это исправить? Если да, то предложите решение.
   */
-
+  /*В браузере, между строчными элементами, перенос стоки превращается в пробел.
+  Решения:
+  1. Записать все элементы i в одну строку.
+  2. Задать родительскому блоку div свойство display: flex.
+  3. Изначально добавлять элементы i с помощью javascript (на пример через 
+  .appendChild()).
+  */
 
 </script>
 </body>

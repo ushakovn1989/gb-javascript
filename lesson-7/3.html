@@ -25,7 +25,9 @@
    * параметр "n"
    */
   function descendingOrder(n) {
-
+    n = Array.from(n.toString());
+    n = n.sort((a, b) => b - a);
+    return parseInt(n.join(""));
   }
 
   console.log(descendingOrder(42145)); // 54421

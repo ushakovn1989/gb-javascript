@@ -17,6 +17,10 @@ body {
     align-items: center;
 }
 
+.rightHeader {
+    position: relative;
+}
+
 @media (min-width: 1600px) {
     .container {
         margin: 0 auto;
@@ -60,7 +64,7 @@ body {
     position: relative;
 }
 
-.cartIconWrap span {
+.cartCounter {
     display: inline-block;
     width: 19px;
     height: 19px;
@@ -73,6 +77,32 @@ body {
     top: -19px;
     font-size: 12px;
     line-height: 19px;
+}
+
+.cartContent {
+    background-color: #fff;
+    border: 1px solid black;
+    border-collapse: collapse;
+    position: absolute;
+    right: 0;
+    width: max-content;
+}
+
+.cartContentHidden {
+    visibility: hidden;
+}
+
+th, td {
+    padding: 0 10px;
+}
+
+.cartContent tbody tr {
+    border-bottom: 1px solid #000;
+}
+
+.cartContent tfoot {
+    font-weight: 600;
+    text-align: right;
 }
 
 .newArrivals {
@@ -414,7 +444,7 @@ body {
     align-items: center;
 }
 
-.featuredImgDark button {
+.addToCartBtn {
     background: none;
     border: 1px solid white;
     color: white;
@@ -425,7 +455,7 @@ body {
     font-family: inherit;
 }
 
-.featuredImgDark button img {
+.addToCartBtn img {
     width: 26px;
     height: 24px;
     margin-right: 11px;
